@@ -10,6 +10,7 @@ $$
 W_{\text{PuO}_2}^{\text{thermal}} = \frac{2\ kW}{4.8\ kg} = 0.417 \frac{kW}{kg}
 $$
 
+
 $$
 \text{scale$_\text{ Po}$} = \frac{W_{\text{PuO}_2}^{\text{thermal}} \cdot \rho_{\text{Po}}}{W_{\text{Po}}^{\text{thermal}} \cdot \rho_{\text{PuO}_2}} = \frac{140 \cdot \frac{kW}{kg} 11.5 \frac{kg}{L}}{0.417 \frac{kW}{kg} \cdot 9.2 \frac{kg}{L}} = 419.7
 $$
