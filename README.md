@@ -1,5 +1,8 @@
 # Polonium RTG: *Re*math*ter*
 
+TODO: fix percentages render
+TODO: account for different effectiveness for two stages of LiH coolant
+
 **Disclaimer**: This is an update to a question [here](https://worldbuilding.stackexchange.com/questions/263239/reality-check-energy-source-for-power-armour). I hit a character limit, but still wanted to redo some calculations as I spotted mistakes which are too late to edit in place.
 
 ## Scaling
