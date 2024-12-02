@@ -7,12 +7,11 @@
 It was a surprise for me to learn that MMRTG operate not on pure plutonium, but on its oxide. Unsurprisingly, oxide has different density from pure metal. This affects the power-to-volume scaling constant. Data on plutonium oxide is taken from [here](https://mars.nasa.gov/internal_resources/788/).
 
 $$
-W_{\text{PuO}_2}^{\text{thermal}} = \frac{2\ kW}{4.8\ kg} = 0.417 \frac{kW}{kg}
+W\_{\text{PuO}\_2}^{\text{thermal}} = \frac{2\ kW}{4.8\ kg} = 0.417 \frac{kW}{kg}
 $$
 
-
 $$
-\text{scale$_\text{ Po}$} = \frac{W_{\text{PuO}_2}^{\text{thermal}} \cdot \rho_{\text{Po}}}{W_{\text{Po}}^{\text{thermal}} \cdot \rho_{\text{PuO}_2}} = \frac{140 \cdot \frac{kW}{kg} 11.5 \frac{kg}{L}}{0.417 \frac{kW}{kg} \cdot 9.2 \frac{kg}{L}} = 419.7
+\text{scale$\_\text{ Po}$} = \frac{W\_{\text{PuO}\_2}^{\text{thermal}} \cdot \rho\_{\text{Po}}}{W\_{\text{Po}}^{\text{thermal}} \cdot \rho\_{\text{PuO}\_2}} = \frac{140 \cdot \frac{kW}{kg} 11.5 \frac{kg}{L}}{0.417 \frac{kW}{kg} \cdot 9.2 \frac{kg}{L}} = 419.7
 $$
 
 Moreover, actual boiling point of polonium is $962 °C$, which is lower than boiling point of lithium. To enable lithium as coolant, one must replace pure polonium to thulium polonide, $\text{PoTm}$, which has  [*melting point*](https://en.wikipedia.org/wiki/Polonide#Intermetallic_polonides) of $2200 °C$. No salting needed, which is likely not that trivial anyways. With so much heat power polonium could be replaced by its compound with no problems.
@@ -20,7 +19,7 @@ Moreover, actual boiling point of polonium is $962 °C$, which is lower than boi
 This affects scale factor and in order to compute it I need density of $\text{PoTm}$. Which is apparently an unobtainable value. I will estimate it by polonium density as thulium and polonium have surprisingly similar values. The thermal power should be less and, the precise output is nowhere to be found. I will approximate it by molar mass ratio. 
 
 $$
-\text{scale$_\text{ PoTm}$} = \frac{\mu_{Po}}{\mu_{PoTm}} \cdot \text{scale$_\text{ Po}$} = \frac{210}{210 + 168} \cdot 419.7 = 233.2
+\text{scale$\_\text{ PoTm}$} = \frac{\mu\_{Po}}{\mu\_{PoTm}} \cdot \text{scale$\_\text{ Po}$} = \frac{210}{210 + 168} \cdot 419.7 = 233.2
 $$
 
 ## Coolant
@@ -45,32 +44,32 @@ $$
 Energies for all these processes are as follows.
 
 $$
-E_{\text{heat capacity}} = 24.86 \frac{J}{\text{mol} \cdot K}
+E\_{\text{heat capacity}} = 24.86 \frac{J}{\text{mol} \cdot K}
 $$
 $$
-E_{\text{fusion}} = 3 \frac{kJ}{\text{mol}}
+E\_{\text{fusion}} = 3 \frac{kJ}{\text{mol}}
 $$
 
 $$
-E_{\text{evaporation}} = 136 \frac{kJ}{\text{mol}}
+E\_{\text{evaporation}} = 136 \frac{kJ}{\text{mol}}
 $$
 
 Putting it all together.
 
 $$
-E^{^7\text{Li}}_{\text{specific}} = \frac{3 + 136 + 24.86 \cdot 10^{-3} \cdot (1330 - 20)}{7} = \frac{171.57}{7} = 24.5 \frac{kJ}{g}
+E^{^7\text{Li}}\_{\text{specific}} = \frac{3 + 136 + 24.86 \cdot 10^{-3} \cdot (1330 - 20)}{7} = \frac{171.57}{7} = 24.5 \frac{kJ}{g}
 $$
 
 However, we can do better. Lithium has another stable isotope which weights less.
 
 $$
-E^{^6\text{Li}}_{\text{specific}} = \frac{171.57}{6} = 28.6 \frac{kJ}{g}
+E^{^6\text{Li}}\_{\text{specific}} = \frac{171.57}{6} = 28.6 \frac{kJ}{g}
 $$
 
 With that to dissipate one thermal kilowatt of power during the whole day, the following amount of lithium is needed.
 
 $$
-m^{^6Li}_{\text{loss}} = \frac{3600 \cdot 24 \text{ sec} \cdot 1 \frac{kJ}{s}}{28.6 \frac{kJ}{g} \cdot 1 \text{ day} \cdot 1 \text{ kW}} = 3 \ \frac{\text{kg}}{\text{day} \cdot \text{kW}}
+m^{^6Li}\_{\text{loss}} = \frac{3600 \cdot 24 \text{ sec} \cdot 1 \frac{kJ}{s}}{28.6 \frac{kJ}{g} \cdot 1 \text{ day} \cdot 1 \text{ kW}} = 3 \ \frac{\text{kg}}{\text{day} \cdot \text{kW}}
 $$
 
 ### Water
@@ -82,26 +81,27 @@ Some pressure could be applied to make the whole process a bit more effective.
  Modern firefighters use pressure up to $37 kPa$. With this pressure, boiling temperature is around $250°C$.
 
 $$
-\text{H$_2$O}^{\text{20°C}} \overset{\text{heating}}{\longrightarrow} \text{H$_2$O}^{\text{250°C}} \overset{\text{evaporating}}{\longrightarrow} \text{H$_2$O}^{\text{250°C}} \overset{\text{escape}}{\longrightarrow}
+\text{H$\_2$O}^{\text{20°C}} \overset{\text{heating}}{\longrightarrow} \text{H$\_2$O}^{\text{250°C}} \overset{\text{evaporating}}{\longrightarrow} \text{H$\_2$O}^{\text{250°C}} \overset{\text{escape}}{\longrightarrow}
 $$
 
 $$
-E_{\text{heat capacity}} = 75.385  \frac{J}{\text{mol} \cdot K}
+E\_{\text{heat capacity}} = 75.385  \frac{J}{\text{mol} \cdot K}
 $$
 
 $$
-E_{\text{evaporation}} = 40.66 \frac{kJ}{\text{mol}}
+E\_{\text{evaporation}} = 40.66 \frac{kJ}{\text{mol}}
 $$
 
 Together as the energy is as follows.
 
 $$
-E^{\text{H$_2$O}}_{\text{specific}} = \frac{40.66 + 75.385 \cdot 10^{-3} \cdot 230}{18} = 3.2 \frac{kJ}{g}
+E^{\text{H$\_2$O}}\_{\text{specific}} = \frac{40.66 + 75.385 \cdot 10^{-3} \cdot 230}{18} = 3.2 \frac{kJ}{g}
 $$
+
 Thus, the mass loss.
 
 $$
-m^{\text{H$_2$O}}_{\text{loss}} = \frac{3600 \cdot 24 \text{ sec} \cdot 1 \frac{kJ}{s}}{3.2 \frac{kJ}{g} \cdot 1 \text{day} 1 \cdot 1 \text{ kW}} = 26.8 \ \frac{\text{kg}}{\text{day} \cdot \text{kW}}
+m^{\text{H$\_2$O}}\_{\text{loss}} = \frac{3600 \cdot 24 \text{ sec} \cdot 1 \frac{kJ}{s}}{3.2 \frac{kJ}{g} \cdot 1 \text{day} 1 \cdot 1 \text{ kW}} = 26.8 \ \frac{\text{kg}}{\text{day} \cdot \text{kW}}
 $$
 
 Almost ten times worse than lithium, but the temperature of cold sink is lower and that permits higher maximum efficiency and compactness. This temperature could support pure polonium instead of thulium polonide.
@@ -115,7 +115,7 @@ This is a lithium compound, $\text{LiH}$, that decomposes into lithium and hydro
 The key factor here is that it has greater density than lithium and significant formation energy. 
 
 $$
-E^{\text{LiH}}_{\text{formation}} = 90 \frac{kJ}{\text{mol}}
+E^{\text{LiH}}\_{\text{formation}} = 90 \frac{kJ}{\text{mol}}
 $$
 
 Here is a black-and-white image of it for reference.
@@ -128,7 +128,7 @@ $$
 ^6\text{LiH}^{\text{20°C}} \overset{\text{heating}}{\longrightarrow} \ 
 ^6\text{LiH}^{\text{688.7°C}} \overset{\text{melting}}{\longrightarrow} \ 
 ^6\text{LiH}^{\text{688.7°C}} \overset{\text{heating}}{\longrightarrow} \
-^6\text{LiH}^{\text{1000°C}} \underset{\text{boiling}}{\overset{\text{decomposition}}{\longrightarrow}} \ ^6\text{Li}^{\text{1000°C}} + \frac{1}{2}\text{H}_2^{\text{1000°C}}
+^6\text{LiH}^{\text{1000°C}} \underset{\text{boiling}}{\overset{\text{decomposition}}{\longrightarrow}} \ ^6\text{Li}^{\text{1000°C}} + \frac{1}{2}\text{H}\_2^{\text{1000°C}}
 $$
 
 The important thing here is to account for escaping hydrogen, later part goes as before.
@@ -140,28 +140,28 @@ $$
 There are many important energy values to consider. Enthalpy of fusion for $\text{LiH}$ is found on [pubchem](https://pubchem.ncbi.nlm.nih.gov/compound/62714#section=Other-Experimental-Properties), the rest are on the respected wiki pages for [hydrogen](https://en.wikipedia.org/wiki/Hydrogen), [lithium](https://en.wikipedia.org/wiki/Lithium) and [lithium hydrate](https://en.wikipedia.org/wiki/Lithium_hydride). 
 
 $$
-E_{\text{fusion}}^{\text{LiH}} = 22.59 \frac{kJ}{\text{mol}}
+E\_{\text{fusion}}^{\text{LiH}} = 22.59 \frac{kJ}{\text{mol}}
 $$
 $$
-E_{\text{decomposition}}^{\text{LiH}} = E^{\text{LiH}}_{\text{formation}} = 90 \frac{kJ}{\text{mol}}
+E\_{\text{decomposition}}^{\text{LiH}} = E^{\text{LiH}}\_{\text{formation}} = 90 \frac{kJ}{\text{mol}}
 $$
 $$
-E_{\text{heat capacity}}^{\text{H}_2} = 28.836  \frac{J}{\text{mol} \cdot K}
+E\_{\text{heat capacity}}^{\text{H}\_2} = 28.836  \frac{J}{\text{mol} \cdot K}
 $$
 $$
-E_{\text{evaporation}}^{\text{Li}} = 136 \frac{kJ}{\text{mol}}
+E\_{\text{evaporation}}^{\text{Li}} = 136 \frac{kJ}{\text{mol}}
 $$
 $$
-E_{\text{heat capacity}}^{\text{Li}} = 75.385  \frac{J}{\text{mol} \cdot K}
+E\_{\text{heat capacity}}^{\text{Li}} = 75.385  \frac{J}{\text{mol} \cdot K}
 $$
 
 All this together go as follows, provided $^6\text{Li}$ is used
 
 $$
-E_{\text{specific}}^{\text{LiH}} = \frac{22.59 + 90 + \frac{1}{2}28.836\cdot 0.98 }{6 + 1} + \frac{136 + 75.385 \cdot 1.31}{6 + 1} = 
+E\_{\text{specific}}^{\text{LiH}} = \frac{22.59 + 90 + \frac{1}{2}28.836\cdot 0.98 }{6 + 1} + \frac{136 + 75.385 \cdot 1.31}{6 + 1} = 
 $$
 $$
-= \frac{126.72}{7}_{1000°C} + \frac{234.75}{7}_{1330°C} = \frac{361.47}{7} = 
+= \frac{126.72}{7}\_{1000°C} + \frac{234.75}{7}\_{1330°C} = \frac{361.47}{7} = 
 $$
 $$
 51.64 \frac{kJ}{g}
@@ -170,11 +170,11 @@ $$
 For the whole day, to dissipate a single thermal kilowatt one needs the following amount of lithium hydride.
 
 $$
-m_{\text{loss}}^{\text{LiH}} = \frac{3600 \cdot 24}{51.64} = 1.67\ \frac{\text{kg}}{\text{day} \cdot \text{kW}}
+m\_{\text{loss}}^{\text{LiH}} = \frac{3600 \cdot 24}{51.64} = 1.67\ \frac{\text{kg}}{\text{day} \cdot \text{kW}}
 $$
 
 $$
-V_{\text{loss}}^{\text{LiH}} = \frac{1.67}{0.78} = 2.16\ \frac{\text{L}}{\text{day} \cdot \text{kW}}
+V\_{\text{loss}}^{\text{LiH}} = \frac{1.67}{0.78} = 2.16\ \frac{\text{L}}{\text{day} \cdot \text{kW}}
 $$
 
 This is a best coolant by far.
@@ -187,19 +187,19 @@ For pure polonium RTGs operating temperature, $950°C$, is around boiling point 
 
 Melting point of copper is $1084.62 °C$, which not very high, aluminum is even lower, while platinum melts only at $1768.3 °C$. So, let's assume that it is possible to preserve wiring and structure with advanced material science all the way to $2000 °C$.
 
-Let's compute maximum power source effectiveness for different configurations of coolant and fuel. Maximum effectiveness is  $\eta(T_c, T_h) = 1 - \frac{T_c}{T_h}$, where temperatures are in kelvins.
+Let's compute maximum power source effectiveness for different configurations of coolant and fuel. Maximum effectiveness is  $\eta(T\_c, T\_h) = 1 - \frac{T\_c}{T\_h}$, where temperatures are in kelvins.
 
 $$
-\eta_{\text{H$_2$O-Po}} = \eta(250°C, 950°C) = 57.23\%
+\eta\_{\text{H$\_2$O-Po}} = \eta(250°C, 950°C) = 57.23\%
 $$
 $$
-\eta_{\text{H$_2$O-PoTm}} = \eta(250°C, 2000°C) = 76.98\%
+\eta\_{\text{H$\_2$O-PoTm}} = \eta(250°C, 2000°C) = 76.98\%
 $$
 $$
-\eta_{\text{Li-PoTm}} = \eta(1330°C, 2000°C) = 29.47\%
+\eta\_{\text{Li-PoTm}} = \eta(1330°C, 2000°C) = 29.47\%
 $$
 $$
-\eta_{\text{LiH-PoTm}} = \eta(1000°C, 2000°C) = 43.99\%
+\eta\_{\text{LiH-PoTm}} = \eta(1000°C, 2000°C) = 43.99\%
 $$
 
 Interestingly enough, effectiveness should drop after the $\text{LiH}$ coolant exhausts all hydrogen and switches to pure $\text{Li}$.
@@ -212,7 +212,7 @@ However, these are theoretical maximums for effectiveness, assembled device coul
 Let's compute coolant consumption for different armour setups.
 
 $$
-W_{exo} = 5kW
+W\_{exo} = 5kW
 $$
 
 ### Water
@@ -220,18 +220,19 @@ $$
 Baseline effectiveness is lithium, I arbitrary chose as $10\%$, because $6\%$ is just too low. Water-polonide effectiveness is scaled by maximum values from baseline.
 
 $$
-\eta = 10\% \cdot \frac{\eta_{\text{H$_2$O-PoTm}}}{\eta_{\text{LiH-PoTm}}} = 26.1 \%
+\eta = 10\% \cdot \frac{\eta\_{\text{H$\_2$O-PoTm}}}{\eta\_{\text{LiH-PoTm}}} = 26.1 \%
 $$
 
-Water loss for $W_{exo}$ by mass.
+Water loss for $W\_{exo}$ by mass.
 
 $$
-M_{\text{loss}}^{\text{H$_2$O}} = m_{\text{loss}}^{\text{H$_2$O}} \cdot \frac{W_{exo}}{\eta} \cdot (1 - \eta) = 26.8 \cdot \frac{5}{0.261}\cdot 0.739 = 379.41 \frac{\text{kg}}{\text{day}} 
+M\_{\text{loss}}^{\text{H$\_2$O}} = m\_{\text{loss}}^{\text{H$\_2$O}} \cdot \frac{W\_{exo}}{\eta} \cdot (1 - \eta) = 26.8 \cdot \frac{5}{0.261}\cdot 0.739 = 379.41 \frac{\text{kg}}{\text{day}} 
 $$
 
-Water loss for $W_{exo}$ by volume.
+Water loss for $W\_{exo}$ by volume.
+
 $$
-V_{\text{loss}}^{\text{H$_2$O}} = 379.41 \frac{\text{L}}{\text{day}}
+V\_{\text{loss}}^{\text{H$\_2$O}} = 379.41 \frac{\text{L}}{\text{day}}
 $$
 
 It's still too much even with effectiveness scaling.
@@ -247,27 +248,28 @@ $$
 Lithium hydride loss per day by mass.
 
 $$
-M_{\text{loss}}^{\text{LiH}} = m_{\text{loss}}^{\text{LiH}} \cdot \frac{W_{exo}}{\eta} \cdot (1 - \eta) = 1.68 \cdot \frac{5}{0.1}\cdot 0.9 = 75.15 \frac{\text{kg}}{\text{day}} 
+M\_{\text{loss}}^{\text{LiH}} = m\_{\text{loss}}^{\text{LiH}} \cdot \frac{W\_{exo}}{\eta} \cdot (1 - \eta) = 1.68 \cdot \frac{5}{0.1}\cdot 0.9 = 75.15 \frac{\text{kg}}{\text{day}} 
 $$
 
 Lithium hydride loss per day by volume.
+
 $$
-V_{\text{loss}}^{\text{LiH}} = 97.2 \frac{\text{L}}{\text{day}}
+V\_{\text{loss}}^{\text{LiH}} = 97.2 \frac{\text{L}}{\text{day}}
 $$
 
 Expected mass of the whole RTG without coolant, which is just scaled MMRTG by power output.
 
 $$
-M_{RTG}^{\text{PoTm}} = \frac{M_{MMRTG}}{\text{scale}_{{\text{ PoTm}}}} \cdot \frac{W^{\text{thermal}}_{{\text{PoTm}}}}{2 \text{ kW}} = \frac{43 \text{ kg}}{233.2} \cdot \frac{W_{exo}}{\eta \cdot2kW} = 4.61 \text{ kg}
+M\_{RTG}^{\text{PoTm}} = \frac{M\_{MMRTG}}{\text{scale}\_{{\text{ PoTm}}}} \cdot \frac{W^{\text{thermal}}\_{{\text{PoTm}}}}{2 \text{ kW}} = \frac{43 \text{ kg}}{233.2} \cdot \frac{W\_{exo}}{\eta \cdot2kW} = 4.61 \text{ kg}
 $$
 
 Expected mass of the polonide fuel, which is also scaled by power output from plutonium fuel.
 
 $$
-M_{\text{ fuel}}^{\text{PoTm}} = \frac{M^{\text{fuel}}_{MMRTG}}{\text{scale}_{{\text{ PoTm}}}} \cdot \frac{W^{\text{thermal}}_{{\text{PoTm}}}}{2 \text{ kW}} = \frac{4.8 \text{ kg}}{233.2} \cdot \frac{W_{exo}}{\eta \cdot2kW} = 0.514 \text{ kg}
+M\_{\text{ fuel}}^{\text{PoTm}} = \frac{M^{\text{fuel}}\_{MMRTG}}{\text{scale}\_{{\text{ PoTm}}}} \cdot \frac{W^{\text{thermal}}\_{{\text{PoTm}}}}{2 \text{ kW}} = \frac{4.8 \text{ kg}}{233.2} \cdot \frac{W\_{exo}}{\eta \cdot2kW} = 0.514 \text{ kg}
 $$
 
-This means that there would be around $50 \text{ ml}$ of fuel that is spread thinly, like butter, between an inner side of the outmost thermal isolation and the outermost side, the hot shoe, of the thermoelectric element. Than there would be a body of lithium that would be wrapped by the thermoelectric elements, providing cold shoe. Lithium would be most of mass and volume of the power source. 
+This means that there would be around $50 \text{ ml}$ of fuel that is spread thinly, like butter, between an inner side of the outmost thermal isolation and the outermost side, the hot shoe, of the thermoelectric element. Than there would be a body of lithium that would be wrapped by the other side of thermoelectric elements, providing cold shoe. Lithium would be most of mass and volume of the power source. 
 
 Thw whole setup is just a 100L barrel of lithium wrapped in thermoelectric element, thin layer of polonium and outer isolation. Here it is such a barrel with human for scale.
 
