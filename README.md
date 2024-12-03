@@ -181,6 +181,11 @@ This is the best coolant by far.
 
 Assuming material science progress it is not a long stretch to establish that whatever the operating temperature, it is possible to isolate the wearer and armour itself from the heat. This will not solve the meltdown problem, but will permit to use high temperature coolants. 
 
+For better or worse, any RTG is still a [heat engine](https://en.wikipedia.org/wiki/Heat_engine). 
+
+![Heat engine](pics/Heat_engine.png)
+
+
 For pure polonium RTGs, the operating temperature, $950°C$, is around the boiling point of the fuel, $962 °C$. For the polonide RTGs the temperature is not bound by fuel boiling, but rather by the limits of structural materials. 
 
 The melting point of copper is $1084.62 °C$, which is not very high, aluminum is even lower, while platinum melts only at $1768.3 °C$. So, let's assume that it is possible to preserve wiring and structure with advanced material science all the way to $2000 °C$.
