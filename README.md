@@ -281,7 +281,7 @@ Thw whole setup is just a 100L barrel of lithium wrapped in thermoelectric eleme
 
 ## Conclusion
 
-Math kinda checks out and, modulo daily coolant refills, the design seems to work. The bottom line is that it is an obligation for power armour user to carry a huge backpack and be kinda bulky. 
+Math kinda checks out and, modulo daily coolant refills, the design seems to work. The bottom line is that it is an obligation for power armour user to carry a huge backpack and be bulky. 
 
 ![armour1](pics/power%20armour.png)
 
