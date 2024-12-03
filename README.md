@@ -281,7 +281,13 @@ Thw whole setup is just a 100L barrel of lithium wrapped in thermoelectric eleme
 
 ## Conclusion
 
-Math kinda checks out and, modulo daily coolant refills, the design seems to work.
+Math kinda checks out and, modulo daily coolant refills, the design seems to work. The bottom line is that it is an obligation for power armour user to carry a huge backpack and be kinda bulky. 
+
+![armour1](pics/power%20armour.png)
+
+The first art is by [progv](https://www.deviantart.com/progv), the second is by [flyingdebris](https://www.deviantart.com/flyingdebris), the [source](https://www.pinterest.com/pin/292874782036315335/) for the third, the most optimistic one, is not clear. 
+
+I would even say that this shifts the whole design into mech suit territory, but the level of power is not quit there yet. Even with a very optimistic estimation($5 \frac{W^{\text{running}}}{kg}$) the whole thing should weight a ton at most. 
 
 
 
