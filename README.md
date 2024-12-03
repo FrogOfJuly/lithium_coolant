@@ -1,6 +1,5 @@
 # Polonium RTG: *Re*math*ter*
 
-TODO: fix percentages render
 TODO: account for different effectiveness for two stages of LiH coolant
 
 **Disclaimer**: This is an update to a question [here](https://worldbuilding.stackexchange.com/questions/263239/reality-check-energy-source-for-power-armour). I hit a character limit, but still wanted to redo some calculations as I spotted mistakes which are too late to edit in place.
@@ -193,21 +192,21 @@ Melting point of copper is $1084.62 °C$, which not very high, aluminum is even 
 Let's compute maximum power source effectiveness for different configurations of coolant and fuel. Maximum effectiveness is  $\eta(T\_c, T\_h) = 1 - \frac{T\_c}{T\_h}$, where temperatures are in kelvins.
 
 $$
-\eta\_{\text{H$\_2$O-Po}} = \eta(250°C, 950°C) = 57.23\%
+\eta\_{\text{H$\_2$O-Po}} = \eta(250°C, 950°C) = 57.23\\%
 $$
 $$
-\eta\_{\text{H$\_2$O-PoTm}} = \eta(250°C, 2000°C) = 76.98\%
+\eta\_{\text{H$\_2$O-PoTm}} = \eta(250°C, 2000°C) = 76.98\\%
 $$
 $$
-\eta\_{\text{Li-PoTm}} = \eta(1330°C, 2000°C) = 29.47\%
+\eta\_{\text{Li-PoTm}} = \eta(1330°C, 2000°C) = 29.47\\%
 $$
 $$
-\eta\_{\text{LiH-PoTm}} = \eta(1000°C, 2000°C) = 43.99\%
+\eta\_{\text{LiH-PoTm}} = \eta(1000°C, 2000°C) = 43.99\\%
 $$
 
 Interestingly enough, effectiveness should drop after the $\text{LiH}$ coolant exhausts all hydrogen and switches to pure $\text{Li}$.
 
-However, these are theoretical maximums for effectiveness, assembled device could be drastically less efficient. For example MMRTG and GPHS-RTG have [efficiency](https://mars.nasa.gov/internal_resources/788/) of only $6.3\%$, while their [theoretical maximum](https://ntrs.nasa.gov/api/citations/20080003866/downloads/20080003866.pdf) are $\eta(210°C, 538°C) = 40.44\%$ and $\eta(300°C, 1000°C) = 54.98\%$ respectfully.
+However, these are theoretical maximums for effectiveness, assembled device could be drastically less efficient. For example MMRTG and GPHS-RTG have [efficiency](https://mars.nasa.gov/internal_resources/788/) of only $6.3\\%$, while their [theoretical maximum](https://ntrs.nasa.gov/api/citations/20080003866/downloads/20080003866.pdf) are $\eta(210°C, 538°C) = 40.44\\%$ and $\eta(300°C, 1000°C) = 54.98\\%$ respectfully.
 
 
 ## Power armour configurations
@@ -220,10 +219,10 @@ $$
 
 ### Water
 
-Baseline effectiveness is lithium, I arbitrary chose as $10\%$, because $6\%$ is just too low. Water-polonide effectiveness is scaled by maximum values from baseline.
+Baseline effectiveness is lithium, I arbitrary chose as $10\\%$, because $6\\%$ is just too low. Water-polonide effectiveness is scaled by maximum values from baseline.
 
 $$
-\eta = 10\% \cdot \frac{\eta\_{\text{H$\_2$O-PoTm}}}{\eta\_{\text{LiH-PoTm}}} = 26.1 \%
+\eta = 10\\% \cdot \frac{\eta\_{\text{H$\_2$O-PoTm}}}{\eta\_{\text{LiH-PoTm}}} = 26.1 \\%
 $$
 
 Water loss for $W\_{exo}$ by mass.
@@ -245,7 +244,7 @@ It's still too much even with effectiveness scaling.
 Baseline effectiveness.
 
 $$
-\eta = 10\%
+\eta = 10\\%
 $$
 
 Lithium hydride loss per day by mass.
