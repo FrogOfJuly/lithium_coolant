@@ -120,7 +120,7 @@ $$
 E^{\text{LiH}}\_{\text{formation}} = 90 \frac{kJ}{\text{mol}}
 $$
 
-The price for it is increased molar mass by a single nuclei. The stage I of the heating process goes as follows.
+The price for it is increased molar mass by a single nuclei. The $\text{stage I}$ of the heating process goes as follows.
 
 $$
 ^6\text{LiH}^{\text{20°C}} \overset{\text{heating}}{\longrightarrow} \ 
@@ -129,7 +129,7 @@ $$
 ^6\text{LiH}^{\text{1000°C}} \underset{\text{boiling}}{\overset{\text{decomposition}}{\longrightarrow}} \ ^6\text{Li}^{\text{1000°C}} + \frac{1}{2}\text{H}\_2^{\text{1000°C}}
 $$
 
-The important thing here is to account for escaping hydrogen, stage II goes similar to pure lithium described above.
+The important thing here is to account for escaping hydrogen, $\text{stage II}$ goes similar to pure lithium described above.
 
 $$
 ^6\text{Li}^{\text{1000°C}}  \overset{\text{heating}}{\longrightarrow} \ ^6\text{Li}^{\text{1330°C}} \overset{\text{evaporation}}{\longrightarrow} \ ^6\text{Li}^{\text{1330°C}} \overset{\text{escape}}{\longrightarrow}
