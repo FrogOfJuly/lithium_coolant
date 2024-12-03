@@ -1,8 +1,6 @@
 # Polonium RTG: *Re*math*ter*
 
-TODO: account for different effectiveness for two stages of LiH coolant
-
-**Disclaimer**: This is an update to a question [here](https://worldbuilding.stackexchange.com/questions/263239/reality-check-energy-source-for-power-armour). I hit a character limit, but still wanted to redo some calculations as I spotted mistakes which are too late to edit in place.
+**Disclaimer**: This is an update to a question [here](https://worldbuilding.stackexchange.com/questions/263239/reality-check-energy-source-for-power-armour). I hit the character limit, but still wanted to redo some calculations as I spotted mistakes which were too late to edit in place.
 
 ## Scaling
 
@@ -112,6 +110,8 @@ Almost ten times worse than lithium, but the temperature of cold sink is lower a
 
 This is a lithium compound, $\text{LiH}$, that decomposes into lithium and hydrogen near 1000°C. 
 
+Here is a black-and-white image of it for reference.
+
 ![LiH](pics/LiH.jpg)
 
 The key factor here is that it has greater density than lithium and significant formation energy. 
@@ -120,11 +120,7 @@ $$
 E^{\text{LiH}}\_{\text{formation}} = 90 \frac{kJ}{\text{mol}}
 $$
 
-Here is a black-and-white image of it for reference.
-
-
-
-The price for it is increased molar mass by a single nuclei. The heating process goes as follows.
+The price for it is increased molar mass by a single nuclei. The stage I of the heating process goes as follows.
 
 $$
 ^6\text{LiH}^{\text{20°C}} \overset{\text{heating}}{\longrightarrow} \ 
@@ -133,7 +129,7 @@ $$
 ^6\text{LiH}^{\text{1000°C}} \underset{\text{boiling}}{\overset{\text{decomposition}}{\longrightarrow}} \ ^6\text{Li}^{\text{1000°C}} + \frac{1}{2}\text{H}\_2^{\text{1000°C}}
 $$
 
-The important thing here is to account for escaping hydrogen, later part goes as before.
+The important thing here is to account for escaping hydrogen, stage II goes similar to pure lithium described above.
 
 $$
 ^6\text{Li}^{\text{1000°C}}  \overset{\text{heating}}{\longrightarrow} \ ^6\text{Li}^{\text{1330°C}} \overset{\text{evaporation}}{\longrightarrow} \ ^6\text{Li}^{\text{1330°C}} \overset{\text{escape}}{\longrightarrow}
@@ -163,7 +159,7 @@ $$
 E\_{\text{specific}}^{\text{LiH}} = \frac{22.59 + 90 + \frac{1}{2}28.836\cdot 0.98 }{6 + 1} + \frac{136 + 75.385 \cdot 1.31}{6 + 1} = 
 $$
 $$
-= \frac{126.72}{7}\_{1000°C} + \frac{234.75}{7}\_{1330°C} = \frac{361.47}{7} = 
+= \frac{126.72}{7}\_{1000°C}^{\text{stage I}} + \frac{234.75}{7}\_{1330°C}^{\text{stage II}} = \frac{361.47}{7} = 
 $$
 $$
 51.64 \frac{kJ}{g}
@@ -189,19 +185,19 @@ For pure polonium RTGs operating temperature, $950°C$, is around boiling point 
 
 Melting point of copper is $1084.62 °C$, which not very high, aluminum is even lower, while platinum melts only at $1768.3 °C$. So, let's assume that it is possible to preserve wiring and structure with advanced material science all the way to $2000 °C$.
 
-Let's compute maximum power source effectiveness for different configurations of coolant and fuel. Maximum effectiveness is  $\eta(T\_c, T\_h) = 1 - \frac{T\_c}{T\_h}$, where temperatures are in kelvins.
+Let's compute maximum power source effectiveness for different configurations of coolant and fuel. Maximum effectiveness is  $\eta^{\text{max}}(T\_c, T\_h) = 1 - \frac{T\_c}{T\_h}$, where temperatures are in kelvins.
 
 $$
-\eta\_{\text{H$\_2$O-Po}} = \eta(250°C, 950°C) = 57.23\\%
+\eta\_{\text{H$\_2$O-Po}}^{\text{max}} = \eta^{\text{max}}(250°C, 950°C) = 57.23\\%
 $$
 $$
-\eta\_{\text{H$\_2$O-PoTm}} = \eta(250°C, 2000°C) = 76.98\\%
+\eta\_{\text{H$\_2$O-PoTm}}^{\text{max}} = \eta^{\text{max}}(250°C, 2000°C) = 76.98\\%
 $$
 $$
-\eta\_{\text{Li-PoTm}} = \eta(1330°C, 2000°C) = 29.47\\%
+\eta\_{\text{Li-PoTm}}^{\text{max}} = \eta^{\text{max}}(1330°C, 2000°C) = 29.47\\%
 $$
 $$
-\eta\_{\text{LiH-PoTm}} = \eta(1000°C, 2000°C) = 43.99\\%
+\eta\_{\text{LiH-PoTm}}^{\text{max}} = \eta^{\text{max}}(1000°C, 2000°C) = 43.99\\%
 $$
 
 Interestingly enough, effectiveness should drop after the $\text{LiH}$ coolant exhausts all hydrogen and switches to pure $\text{Li}$.
@@ -222,13 +218,13 @@ $$
 Baseline effectiveness is lithium, I arbitrary chose as $10\\%$, because $6\\%$ is just too low. Water-polonide effectiveness is scaled by maximum values from baseline.
 
 $$
-\eta = 10\\% \cdot \frac{\eta\_{\text{H$\_2$O-PoTm}}}{\eta\_{\text{LiH-PoTm}}} = 26.1 \\%
+\eta\_{\text{H$\_2$O}} = \eta\_\text{Li} \cdot \frac{\eta^{\text{max}}\_{\text{H$\_2$O-PoTm}}}{\eta^{\text{max}}\_{\text{LiH-PoTm}}} = 26.1 \\%
 $$
 
 Water loss for $W\_{exo}$ by mass.
 
 $$
-M\_{\text{loss}}^{\text{H$\_2$O}} = m\_{\text{loss}}^{\text{H$\_2$O}} \cdot \frac{W\_{exo}}{\eta} \cdot (1 - \eta) = 26.8 \cdot \frac{5}{0.261}\cdot 0.739 = 379.41 \frac{\text{kg}}{\text{day}} 
+M\_{\text{loss}}^{\text{H$\_2$O}} = m\_{\text{loss}}^{\text{H$\_2$O}} \cdot \frac{W\_{exo}}{\eta_{\text{H$\_2$O}}} \cdot (1 - \eta_{\text{H$\_2$O}}) = 26.8 \cdot \frac{5}{0.261}\cdot 0.739 = 379.41 \frac{\text{kg}}{\text{day}} 
 $$
 
 Water loss for $W\_{exo}$ by volume.
@@ -244,19 +240,25 @@ It's still too much even with effectiveness scaling.
 Baseline effectiveness.
 
 $$
-\eta = 10\\%
+\eta\_\text{Li} = 10\\%
+$$
+
+But that is only for pure lithium, which is only a part of the cooling by $\text{LiH}$. The first boiling stage is going to be more effecitive. Let's scale it by maximum efficiency proptionally to released energy. 
+
+$$
+\eta\_{\text{LiH}}^{\text{all}} = \frac{E\_{\text{LiH}}^{\text{stage I}}}{E\_{\text{LiH}}} \cdot \frac{\eta^{\text{max}}\_{\text{LiH-PoTm}}}{\eta^{\text{max}}\_{\text{Li-PoTm}}} \cdot \eta\_{\text{Li}} + \frac{E\_{\text{LiH}}^{\text{stage II}}}{E\_{\text{LiH}}} \cdot \eta\_{\text{Li}} = \left(\frac{126.72}{361.47} \cdot \frac{0.4399}{0.2947} + \frac{234.75}{361.47}\right) \cdot 0.1 = 11.73\\%
 $$
 
 Lithium hydride loss per day by mass.
 
 $$
-M\_{\text{loss}}^{\text{LiH}} = m\_{\text{loss}}^{\text{LiH}} \cdot \frac{W\_{exo}}{\eta} \cdot (1 - \eta) = 1.68 \cdot \frac{5}{0.1}\cdot 0.9 = 75.15 \frac{\text{kg}}{\text{day}} 
+M\_{\text{loss}}^{\text{LiH}} = m\_{\text{loss}}^{\text{LiH}} \cdot \frac{W\_{exo}}{\eta\_{\text{LiH}}^{\text{all}}} \cdot (1 - \eta\_{\text{LiH}}^{\text{all}}) = 1.68 \cdot 5 \cdot 7.53 = 73.21 \frac{\text{kg}}{\text{day}} 
 $$
 
 Lithium hydride loss per day by volume.
 
 $$
-V\_{\text{loss}}^{\text{LiH}} = 97.2 \frac{\text{L}}{\text{day}}
+V\_{\text{loss}}^{\text{LiH}} = 81 \frac{\text{L}}{\text{day}}
 $$
 
 Expected mass of the whole RTG without coolant, which is just scaled MMRTG by power output.
