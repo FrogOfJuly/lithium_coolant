@@ -215,7 +215,7 @@ $$
 
 ### Water
 
-Baseline effectiveness is lithium, I arbitrary chose as $10\\%$, because $6\\%$ is just too low. Water-polonide effectiveness is scaled by maximum values from baseline.
+Baseline effectiveness is lithium, I arbitrary chose it as $10\\%$, because $6\\%$ is just too low. Water-polonide effectiveness is scaled by maximum values from baseline.
 
 $$
 \eta\_{\text{H$\_2$O}} = \eta\_\text{Li} \cdot \frac{\eta^{\text{max}}\_{\text{H$\_2$O-PoTm}}}{\eta^{\text{max}}\_{\text{LiH-PoTm}}} = 26.1 \\%
