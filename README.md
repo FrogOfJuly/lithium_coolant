@@ -281,7 +281,7 @@ Thw whole setup is just a 100L barrel of lithium wrapped in thermoelectric eleme
 
 ## Conclusion
 
-Math is kinda checks out and, modulo daily coolant refills, the design seems to work.
+Math kinda checks out and, modulo daily coolant refills, the design seems to work.
 
 
 
