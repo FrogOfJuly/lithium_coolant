@@ -275,7 +275,7 @@ $$
 
 This means that there would be around $50 \text{ ml}$ of fuel that is spread thinly, like butter, between an inner side of the outmost thermal isolation and the outermost side, the hot shoe, of the thermoelectric element. Than there would be a body of lithium that would be wrapped by the other side of thermoelectric elements, providing cold shoe. Lithium would be most of mass and volume of the power source. 
 
-Thw whole setup is just a 100L barrel of lithium wrapped in thermoelectric element, thin layer of polonium and outer isolation. Here it is such a barrel with human for scale.
+Thw whole setup is just a 100L barrel of lithium wrapped in thermoelectric element, thin layer of polonium and outer isolation. Here is such a barrel with human for scale.
 
 ![100L.jpg](pics/100L.jpg)
 
