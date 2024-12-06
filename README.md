@@ -11,7 +11,7 @@ W\_{\text{PuO}\_2}^{\text{thermal}} = \frac{2\ kW}{4.8\ kg} = 0.417 \frac{kW}{kg
 $$
 
 $$
-\text{scale$\_\text{ Po}$} = \frac{W\_{\text{PuO}\_2}^{\text{thermal}} \cdot \rho\_{\text{Po}}}{W\_{\text{Po}}^{\text{thermal}} \cdot \rho\_{\text{PuO}\_2}} = \frac{140 \cdot \frac{kW}{kg} 11.5 \frac{kg}{L}}{0.417 \frac{kW}{kg} \cdot 9.2 \frac{kg}{L}} = 419.7
+\text{scale$\_\text{ Po}$} = \frac{W\_{\text{Po}}^{\text{thermal}} \cdot \rho\_{\text{Po}}}{W\_{\text{PuO}\_2}^{\text{thermal}} \cdot \rho\_{\text{PuO}\_2}} = \frac{140 \cdot \frac{kW}{kg} 11.5 \frac{kg}{L}}{0.417 \frac{kW}{kg} \cdot 9.2 \frac{kg}{L}} = 419.7
 $$
 
 Moreover, the actual boiling point of polonium is $962 °C$, which is lower than the boiling point of lithium. To enable lithium as a coolant, one must substitute pure polonium with thulium polonide, $\text{PoTm}$, which has  [*melting point*](https://en.wikipedia.org/wiki/Polonide#Intermetallic_polonides) of $2200 °C$. No salting is needed, which is likely not that trivial anyway. With so much heat power polonium could be replaced by its compound with no problems.
