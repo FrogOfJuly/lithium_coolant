@@ -209,46 +209,6 @@ There are ways to improve this analysis.
 
 Here are some more depictions of power that I find compelling.
 
+![bonus armour depictions](../pics/power%20armour%20bonus.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+The first one is by [bjorn hurri](https://conceptartworld.com/artists/bjorn-hurri/), the second one is from [here](https://www.pinterest.com/pin/543809723757559643/) with unclear creator, and the third one is from [here](https://www.pinterest.com/pin/warhammer-and-other-fantasy-goodness-in-2024--13862711348211321/).
