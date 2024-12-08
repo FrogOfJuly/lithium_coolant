@@ -29,7 +29,7 @@ $$
 Thus, if one wants to supply a single kilowatt of power the following number of fission events must take place per second.
 
 $$
-\text{rate\_of\_fission} = \frac{10^3 \frac{J}{s}}{309.5 \cdot 10^{-13} \text{ J} \cdot 1 \text{ kW}} = 82.9 \cdot 10^{12}\ \frac{1}{s \cdot \text{kW}}
+\text{rate\\_of\\_fission} = \frac{10^3 \frac{J}{s}}{309.5 \cdot 10^{-13} \text{ J} \cdot 1 \text{ kW}} = 82.9 \cdot 10^{12}\ \frac{1}{s \cdot \text{kW}}
 $$
 
 The fission probability of the capture event is $f = 73\%$. Otherwise, neutron is captured and $^{240}\text{Pu}$ is created alongside $\gamma$ emission. 
@@ -39,7 +39,7 @@ The decay chain goes further into the [abyss](https://periodictable.com/Isotopes
 With known molar mass it is possible to compute how much pure plutonium must be consumed per kilowatt of thermal power.
 
 $$
-m_{\text{fuel}} = \frac{1}{f} \cdot \frac{\text{rate\_of\_fission}}{N_A} \cdot \mu_{\text{Pu}} = 3275.18 \cdot 10^{-11} \frac{\text{g}}{s \cdot \text{kW}} = 105.2\ \frac{\text{g}}{\text{year} \cdot \text{kW}}
+m\_{\text{fuel}} = \frac{1}{f} \cdot \frac{\text{rate\\_of\\_fission}}{N_A} \cdot \mu\_{\text{Pu}} = 3275.18 \cdot 10^{-11} \frac{\text{g}}{s \cdot \text{kW}} = 105.2\ \frac{\text{g}}{\text{year} \cdot \text{kW}}
 $$
 
 
@@ -64,7 +64,7 @@ The problem is that to even estimate the $k$ one needs to do a complex modeling 
 However, [this paper](https://www.tandfonline.com/doi/pdf/10.1080/00223131.2000.10874904) provides a value that is considered "safe" for a storage configuration: $k^{\text{max}} = 0.95$. 
 
 $$
-\text{scale}_{\text{ k}} = \frac{1}{1 - k} \implies \text{scale}_{\text{ k}}^{\text{max}} = 20
+\text{scale}\_{\text{ k}} = \frac{1}{1 - k} \implies \text{scale}\_{\text{ k}}^{\text{max}} = 20
 $$
 
 
@@ -80,7 +80,7 @@ However, let's assume the best case to analyze how good $\text{PoBe}$ neutron so
 
 
 $$
-\text{neutron\_emission\_rate} = 4.98 \cdot 10^9\ \frac{\text{Bq}}{\text{g}^{\text{Po}}}
+\text{neutron\\_emission\\_rate} = 4.98 \cdot 10^9\ \frac{\text{Bq}}{\text{g}^{\text{Po}}}
 $$
 
 
@@ -88,13 +88,13 @@ The overall mass to sustain the required amount of fission events in plutonium p
 
 
 $$
-m_\text{\text{ source}} = \frac{1}{f} \cdot \frac{\text{rate\_of\_fission}}{\text{neutron\_emission\_rate}} = \frac{1}{0.73} \cdot \frac{82.9}{4.98} \cdot 10^3 = 16.65 \cdot 10^3\ \frac{\text{g}^{\text{Po}}}{\text{kW}}
+m\_{\text{ source}} = \frac{1}{f} \cdot \frac{\text{rate\\_of\\_fission}}{\text{neutron\\_emission\\_rate}} = \frac{1}{0.73} \cdot \frac{82.9}{4.98} \cdot 10^3 = 16.65 \cdot 10^3\ \frac{\text{g}^{\text{Po}}}{\text{kW}}
 $$
 
-This is too much, as only $m_\text{\text{ decay}} \approx 100\text{g}$ of $\text{Po}$ is needed to supply the required kilowatt of thermal power just by decay. In order to match the thermal energy of $\text{Po}$ decay by $\text{Po}$ neutron source. The neutron multiplication factor should be as follows.
+This is too much, as only $m\_{\text{ decay}} \approx 100\text{g}$ of $\text{Po}$ is needed to supply the required kilowatt of thermal power just by decay. In order to match the thermal energy of $\text{Po}$ decay by $\text{Po}$ neutron source. The neutron multiplication factor should be as follows.
 
 $$
-\frac{1}{\text{scale}_{\text{ k}}} \cdot m_\text{\text{ source}} = m_\text{\text{ decay}} \iff k = 1 - \frac{m_\text{ decay}}{m_\text{\text{ source}}} = 1 - \frac{100}{16.64 \cdot 10^3} = 0.994 > k^{\text{max}}
+\frac{1}{\text{scale}\_{\text{ k}}} \cdot m\_{\text{ source}} = m\_{\text{ decay}} \iff k = 1 - \frac{m\_\text{ decay}}{m_{\text{ source}}} = 1 - \frac{100}{16.64 \cdot 10^3} = 0.994 > k^{\text{max}}
 $$
 
 This does not comply with the safety threshold. Thus, polonium neutron source is out.
@@ -109,14 +109,14 @@ It is hard to make, but even today it is [possible](https://www.sciencedirect.co
 It does not need a complex beryllium setup and just emits $2.314 \cdot 10^6 \frac{\text{neutron}}{\mu\text{g} \cdot \text{s}}$. 
 
 $$
-m_\text{\text{ source}} = \frac{1}{f} \cdot \frac{\text{rate\_of\_fission}}{\text{neutron\_emission\_rate}} = \frac{1}{0.73} \cdot \frac{82.9}{2.314} = 35.82\ \frac{\text{g}^{\text{Cf}}}{\text{kW}}
+m\_{\text{ source}} = \frac{1}{f} \cdot \frac{\text{rate\\_of\\_fission}}{\text{neutron\\_emission\\_rate}} = \frac{1}{0.73} \cdot \frac{82.9}{2.314} = 35.82\ \frac{\text{g}^{\text{Cf}}}{\text{kW}}
 $$
 
 
 Assuming all neutrons are consumed for the first generation to produce a kilowatt of thermal power one needs the following amount of californium. After scaling this thing by a neutron multiplication factor, the desired californium amount is as follows.
 
 $$
-m_\text{\text{ source}} = 1.79\ \frac{\text{g}^{\text{Cf}}}{\text{kW}}
+m_{\text{ source}} = 1.79\ \frac{\text{g}^{\text{Cf}}}{\text{kW}}
 $$
 
 Which is a satisfactory number. 
@@ -124,7 +124,7 @@ Which is a satisfactory number.
 However, as californium rapidly decays it [emits](https://inis.iaea.org/collection/NCLCollectionStore/_Public/01/001/1001697.pdf) $39 \frac{W}{g}$ of heat.
 
 $$
-W_{\text{source}} = 1.79 \cdot 39 = 69.8 \frac{W}{\text{kW}} \approx 7\%
+W\_{\text{source}} = 1.79 \cdot 39 = 69.8 \frac{W}{\text{kW}} \approx 7\%
 $$
 
 
@@ -148,41 +148,43 @@ $$
 Thus at full and minimal utilisations the heat powers will be as follows. 
 
 $$
-W^{\text{thermal}}_{\text{exo active}} = 42.6 \text{kW}
+W^{\text{thermal}}\_{\text{exo active}} = 42.6 \text{kW}
 $$
 
 $$
-W^{\text{thermal}}_{\text{exo stored}} = 2.98 \text{kW}
+W^{\text{thermal}}\_{\text{exo stored}} = 2.98 \text{kW}
 $$
 
 The respected coolant losses per day are as follows.
 
 
 $$
-m^{\text{stored}}_{\text{loss}} = 1.67 \cdot 2.98 = 4.98 \ \frac{\text{kg}}{\text{day}}
+m^{\text{stored}}\_{\text{loss}} = 1.67 \cdot 2.98 = 4.98 \ \frac{\text{kg}}{\text{day}}
 $$
 
 $$
-m^{\text{active}}_{\text{loss}} = 73.21\ \frac{\text{kg}}{\text{day}} 
+m^{\text{active}}\_{\text{loss}} = 73.21\ \frac{\text{kg}}{\text{day}} 
 $$
 
-The component masses.
+The component masses. 
 
 $$
-M_{\text{Cf}} = 8.95 \text{ gram}
-$$
-
-$$
-M_{\text{Pu}} = 0.526\ \frac{\text{g}}{\text{yaer}}
+M\_{\text{Cf}} = 8.95 \text{g}
 $$
 
 $$
-M_{\text{moderator}} = \text{???}
+M\_{\text{Pu}} = 0.526\ \frac{\text{g}}{\text{yaer}}
 $$
 
 $$
-M_{\text{shielding}} = \text{???}
+M\_{\text{moderator}} = \text{???}
 $$
+
+$$
+M\_{\text{shielding}} = \text{???}
+$$
+
+Note: Califormium half-life makes it so each 4.8 months neutron output drops by 10%. In this case either the criticality or amount of $\text{Cf}$ must be increased in order to compensate for it.
 
 
 ## Conclusion
