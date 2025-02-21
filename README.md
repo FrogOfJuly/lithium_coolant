@@ -125,7 +125,7 @@ The price for it is increased molar mass by a single nuclei. The $\text{stage I}
 $$
 ^6\text{LiH}^{\text{20°C}} \overset{\text{heating}}{\longrightarrow} \ 
 ^6\text{LiH}^{\text{688.7°C}} \overset{\text{melting}}{\longrightarrow} \ 
-^6\text{LiH}^{\text{688.7°C}} \overset{\text{heating}}{\longrightarrow} \
+^6\text{LiH}^{\text{688.7°C}} \overset{\text{heating}}{\longrightarrow} \ 
 ^6\text{LiH}^{\text{1000°C}} \underset{\text{boiling}}{\overset{\text{decomposition}}{\longrightarrow}} \ ^6\text{Li}^{\text{1000°C}} + \frac{1}{2}\text{H}\_2^{\text{1000°C}}
 $$
 
