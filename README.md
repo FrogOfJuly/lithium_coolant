@@ -288,6 +288,8 @@ The whole setup is just a 100L barrel of lithium wrapped in a thermoelectric ele
 
 Math kinda checks out and, modulo daily coolant refills, the design seems to work. The bottom line is that it is an obligation for power armour user to carry a huge backpack and be bulky. 
 
+If you are still want to read more, here is an attempt to do the math for an adjustable [power source](bonus/adjustable.md)
+
 ![armour1](pics/power%20armour.png)
 
 The first art is by [progv](https://www.deviantart.com/progv), the second is by [flyingdebris](https://www.deviantart.com/flyingdebris), the [source](https://www.pinterest.com/pin/292874782036315335/) for the third, the most optimistic one, is not clear. 
